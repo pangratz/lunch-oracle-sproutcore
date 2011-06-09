@@ -15,5 +15,5 @@ SC.ready(function() {
     	layerId: 'lunch_oracle',
     	templateName: 'lunch_oracle'
   	});
-	LunchOracle.mainPane.defaultResponder = 'LunchOracle.statechart';
+	LunchOracle.mainPane.set('defaultResponder', LunchOracle.statechart);
 });
