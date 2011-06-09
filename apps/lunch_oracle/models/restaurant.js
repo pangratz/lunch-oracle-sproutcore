@@ -17,6 +17,7 @@ sc_require('lunch_oracle');
 LunchOracle.Restaurant = SC.Record.extend(
 /** @scope LunchOracle.Restaurant.prototype */ {
 	
-	name: SC.Record.attr(String)
+	name: SC.Record.attr(String),
+	image: SC.Record.attr(String)
 	
 }) ;
