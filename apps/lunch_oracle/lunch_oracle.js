@@ -5,29 +5,24 @@
 /*globals LunchOracle */
 
 LunchOracle = SC.Application.create({
-	store: SC.Store.create().from('LunchOracle.LunchOracleFixturesDataSource')
+	store: SC.Store.create().from('LunchOracle.LunchOracleFixturesDataSource')	
 });
 
 LunchOracle.lunchController = SC.ObjectController.create({
+	
 	randomize: function(){
-		var restaurants = LunchOracle.store.find(LunchOracle.Restaurant);
-		if (restaurants) {
-			var size = restaurants.get('length');
-			var index = Math.floor(Math.random() * size);
-			var selectedRestautant = restaurants.objectAt(index);
-			this.set('content', selectedRestautant);
-		} else {
-			this.set('content', {name: 'no restaurants available'});
-		}
+		var index = Math.floor(Math.random() * LunchOracle.restaurantsCount);
+		var selectedRestautant = LunchOracle.restaurants.objectAt(index);
+		this.set('content', selectedRestautant);
 	}
+	
 });
 
-SC.ready(function() {
+SC.ready(function() {	
+	LunchOracle.statechart.initStatechart();
 	
-	LunchOracle.lunchController.randomize();
-	
-  LunchOracle.mainPane = SC.TemplatePane.append({
-    layerId: 'lunch_oracle',
-    templateName: 'lunch_oracle'
-  });
+  	LunchOracle.mainPane = SC.TemplatePane.append({
+    	layerId: 'lunch_oracle',
+    	templateName: 'lunch_oracle'
+  	});
 });
