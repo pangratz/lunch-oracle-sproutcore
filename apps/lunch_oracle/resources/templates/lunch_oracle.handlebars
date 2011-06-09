@@ -2,4 +2,7 @@
 
 {{#view SC.ButtonView title="Random" action="randomize" }}{{/view}}
 
-{{#view SC.LabelView valueBinding="LunchOracle.lunchController.name"}}{{/view}}
+<div id="restaurant" >
+	{{#view SC.ImageView valueBinding="LunchOracle.lunchController.image" id="restaurantImage" }}{{/view}}
+	{{#view SC.LabelView valueBinding="LunchOracle.lunchController.name"}}{{/view}}
+</div>
