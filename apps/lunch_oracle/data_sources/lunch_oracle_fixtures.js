@@ -11,7 +11,7 @@
   @extends SC.FixturesDataSource
 */
 
-sc_require('lunch_oracle')
+sc_require('core')
 
 LunchOracle.LunchOracleFixturesDataSource = SC.FixturesDataSource.extend(
 /** @scope LunchOracle.LunchOracleFixturesDataSource.prototype */ {

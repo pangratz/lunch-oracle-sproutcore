@@ -1,4 +1,4 @@
-sc_require('lunch_oracle');
+sc_require('core');
 sc_require('states/setup_state');
 sc_require('states/ready_state');
 

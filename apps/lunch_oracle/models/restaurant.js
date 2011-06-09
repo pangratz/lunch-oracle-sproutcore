@@ -12,7 +12,7 @@
   @version 0.1
 */
 
-sc_require('lunch_oracle');
+sc_require('core');
 
 LunchOracle.Restaurant = SC.Record.extend(
 /** @scope LunchOracle.Restaurant.prototype */ {
