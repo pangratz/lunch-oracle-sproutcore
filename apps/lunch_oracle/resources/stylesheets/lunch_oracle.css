@@ -2,3 +2,26 @@
   position: relative;
   overflow: visible;
 }
+
+#lunch_oracle {
+	top: 20px;
+	border: thin solid black;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	
+	#restaurant {
+		
+		#restaurantImage {
+			padding-right: 5px;
+			float: left;
+			width: 20px;
+			height: 20px;
+		}
+		
+		#restaurantName {			
+			float: right;
+		}
+	}		
+}
