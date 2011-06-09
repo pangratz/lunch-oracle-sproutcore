@@ -6,28 +6,28 @@ LunchOracle.mixin({
 		
 		trace: YES,
 		
-		rootState: SC.State.design({
-			
-			initialSubstate: 'setup',
-			
-			setup: SC.State.design({
-				enterState: function(){
-					LunchOracle.restaurants = LunchOracle.Restaurant.FIXTURES;
-					LunchOracle.restaurantsCount = LunchOracle.restaurants.get('length');
-					
-					LunchOracle.statechart.gotoState('ready');
-				}
-			}),
-			
-			ready: SC.State.design({
+		initialState: 'setup',
+		
+		setup: SC.State.design({
+			enterState: function(){
+				LunchOracle.restaurants = LunchOracle.Restaurant.FIXTURES;
+				LunchOracle.restaurantsCount = LunchOracle.restaurants.get('length');
 				
-				randomize: function(){
-					LunchOracle.lunchController.randomize();
-				}
-				
-			})
+				LunchOracle.statechart.gotoState('ready');
+			}
+		}),
 			
-		})
+		ready: SC.State.design({
+			
+			enterState: function(){
+				LunchOracle.lunchController.randomize();
+			},
+			
+			randomize: function(){
+				LunchOracle.lunchController.randomize();
+			}
+			
+		})		
 		
 	})
 	
