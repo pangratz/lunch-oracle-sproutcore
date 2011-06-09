@@ -20,7 +20,7 @@ LunchOracle.mixin({
 		ready: SC.State.design({
 			
 			enterState: function(){
-				LunchOracle.lunchController.randomize();
+				LunchOracle.statechart.sendEvent('randomize');
 			},
 			
 			randomize: function(){
