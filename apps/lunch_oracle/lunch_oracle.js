@@ -10,10 +10,18 @@ LunchOracle = SC.Application.create({
 
 LunchOracle.lunchController = SC.ObjectController.create({
 	
-	randomize: function(){
+	randomize: function() {		
+		var current = this.get('content');
+		
 		var index = Math.floor(Math.random() * LunchOracle.restaurantsCount);
-		var selectedRestautant = LunchOracle.restaurants.objectAt(index);
-		this.set('content', selectedRestautant);
+		var selectedRestaurant = LunchOracle.restaurants.objectAt(index);
+		
+		while (current && (current.get('name') === selectedRestaurant.get('name'))) {
+			index = Math.floor(Math.random() * LunchOracle.restaurantsCount);
+			selectedRestaurant = LunchOracle.restaurants.objectAt(index);
+		}
+		
+		this.set('content', selectedRestaurant);
 	}
 	
 });
