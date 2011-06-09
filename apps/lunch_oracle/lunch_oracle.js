@@ -27,12 +27,11 @@ LunchOracle.lunchController = SC.ObjectController.create({
 });
 
 SC.ready(function() {
-	LunchOracle.statechart.initStatechart();
-	
+	SC.RootResponder.responder.set('defaultResponder', LunchOracle.statechart); 		
+	LunchOracle.statechart.initStatechart();	
   	LunchOracle.mainPane = SC.TemplatePane.append({
     	layerId: 'lunch_oracle',
     	templateName: 'lunch_oracle'
   	});
-
-	LunchOracle.mainPane.defaultResponder = "LunchOracle.statechart";
+	LunchOracle.mainPane.defaultResponder = 'LunchOracle.statechart';
 });
