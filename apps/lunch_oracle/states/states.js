@@ -25,6 +25,13 @@ LunchOracle.mixin({
 			
 			randomize: function(){
 				LunchOracle.lunchController.randomize();
+			},
+			
+			keyUp: function(evt) {
+				if (evt.keyCode === 82) {
+					// 'r' pressed
+					LunchOracle.statechart.sendEvent('randomize');
+				}
 			}
 			
 		})		
