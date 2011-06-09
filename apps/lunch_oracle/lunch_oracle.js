@@ -5,7 +5,7 @@
 /*globals LunchOracle */
 
 LunchOracle = SC.Application.create({
-	store: SC.Store.create().from('LunchOracle.LunchOracleFixturesDataSource')	
+	store: SC.Store.create().from(SC.Record.fixtures)	
 });
 
 LunchOracle.lunchController = SC.ObjectController.create({
