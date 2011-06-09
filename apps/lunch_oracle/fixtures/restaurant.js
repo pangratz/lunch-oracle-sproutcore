@@ -10,22 +10,26 @@ LunchOracle.Restaurant.FIXTURES = [
 	
 	{
 		guid: 1,
-		name: "Mc Donald's"
+		name: "Mc Donald's",
+		image: static_url("mcdonalds.png")
 	},
 	
 	{
 		guid: 2,
-		name: "JKU Mensa"
+		name: "JKU Mensa",
+		image: static_url("mensa.png")
 	},
 	
 	{
 		guid: 3,
-		name: "KHG Mensa"
+		name: "KHG Mensa",
+		image: static_url("khg.png")
 	},
 	
 	{
 		guid: 4,
-		name: "A2 China Restaurant"
+		name: "A2 China Restaurant",
+		image: static_url("a2.png")
 	}
 	
 ];
