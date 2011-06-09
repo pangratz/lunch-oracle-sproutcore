@@ -14,11 +14,17 @@ LunchOracle.mixin({
 				enterState: function(){
 					LunchOracle.restaurants = LunchOracle.Restaurant.FIXTURES;
 					LunchOracle.restaurantsCount = LunchOracle.restaurants.get('length');
-				},
+					
+					LunchOracle.statechart.gotoState('ready');
+				}
+			}),
+			
+			ready: SC.State.design({
 				
 				randomize: function(){
 					LunchOracle.lunchController.randomize();
 				}
+				
 			})
 			
 		})
