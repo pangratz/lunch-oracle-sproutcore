@@ -4,4 +4,4 @@
 # ===========================================================================
 
 # Add initial buildfile information here
-config :all, :required => [:sproutcore, "sproutcore/statechart"]
+config :all, :required => [:sproutcore, "sproutcore/statechart"], :load_fixtures  => true
